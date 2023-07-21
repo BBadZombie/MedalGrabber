@@ -1,6 +1,6 @@
-# MedalRipper
+# MedalGrabber
 
-MedalRipper is a Java program that allows a user to obtain information about their Medal.tv clips.
+MedalGrabber is a Java program that allows a user to obtain information about their Medal.tv clips.
 
 ## Installation
 
