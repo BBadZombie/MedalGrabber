@@ -16,6 +16,8 @@
  *  - Added a constructor that takes a parameter to assign to the 'metadataMass' 
  *    String variable. Will maybe be used at a later date, alongside a private
  *    'setMetadataMass()' method for better encapsulation. 
+ *    
+ *    
  */
 public class ChunkGetter
 {
@@ -55,11 +57,11 @@ public class ChunkGetter
      */
     public void indexOfChunk(){
         firstChunkIndex = metadataMass.indexOf("{\"contentId");
-        lastChunkIndex = metadataMass.indexOf("360'") + 4;
 
-        try{
+        if(firstChunkIndex != -1){
+            lastChunkIndex = metadataMass.indexOf("360'") + 4;
             identifiedChunk = metadataMass.substring(firstChunkIndex, lastChunkIndex);
-        }catch(Exception e){
+        }else{
             identifiedChunk = "";
         }
     }
@@ -70,11 +72,11 @@ public class ChunkGetter
      */
     public void lastIndexOfChunk() {
         firstChunkIndex = metadataMass.lastIndexOf("{\"contentId");
-        lastChunkIndex = metadataMass.lastIndexOf("360'") + 4;
 
-        try {
+        if(firstChunkIndex != -1){
+            lastChunkIndex = metadataMass.lastIndexOf("360'") + 4;
             identifiedChunk = metadataMass.substring(firstChunkIndex, lastChunkIndex + 4);
-        } catch (Exception e) {
+        }else{
             identifiedChunk = "";
         }
     }
@@ -92,12 +94,12 @@ public class ChunkGetter
      */
     public void indexOfFluff(){
         firstFluffIndex = metadataMass.indexOf("src");
-        lastFluffIndex = metadataMass.indexOf("},{") + 2;
 
-        try{
+        if(firstFluffIndex != -1){
+            lastFluffIndex = metadataMass.indexOf("},{") + 2;
             identifiedFluff = metadataMass.substring(firstFluffIndex, lastFluffIndex);
-        }catch(Exception e){
-            System.out.println();
+        }else{
+            System.out.println("-No More Fluff Found-\n");
         }
     }
     
@@ -106,12 +108,12 @@ public class ChunkGetter
      */
     public void lastIndexOfFluff(){
         firstFluffIndex = metadataMass.lastIndexOf("src");
-        lastFluffIndex = metadataMass.lastIndexOf("},{") + 2;
 
-        try{
+        if(firstFluffIndex != -1){
+            lastFluffIndex = metadataMass.lastIndexOf("},{") + 2;
             identifiedFluff = metadataMass.substring(firstFluffIndex, lastFluffIndex);
-        }catch(Exception e){
-            System.out.println();
+        }else{
+            System.out.println("-No More Fluff Found-\n");
         }
     }
 
@@ -127,6 +129,7 @@ public class ChunkGetter
         metadataMass = metadataMass.replace(identifiedFluff, "");
     }
 
+    
     //set and get methods
     /**
      * Method to return identified chunk

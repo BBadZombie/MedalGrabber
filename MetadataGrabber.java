@@ -11,10 +11,6 @@ import java.net.URL;
  * 
  * @author Anthony Lopez
  * @version5 7.14.23
- * 
- * Notes for 7.14.23:
- * - I want to find a way where a user just inputs one of their clips and the program obtains their userID through that 
- *   instead of having the user find it through inspect element...
  */
 public class MetadataGrabber implements LoggingUtility{
     private String apiKey;

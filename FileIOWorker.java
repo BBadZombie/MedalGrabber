@@ -5,8 +5,8 @@ import java.util.Scanner;
 import java.util.LinkedList;
 
 /**
- * Class that works with file input and output. Mainly concerning two text documents,
- * 'metadataMass' and ListOfURLs', which the class reads and writes to. 
+ * Class that works with file input and output. Mainly concerning some text documents,
+ * including 'metadataMass' and 'ListOfURLs', which this class reads and writes to. 
  *
  * @author Anthony Lopez
  * @version4 6.08.23
@@ -124,6 +124,7 @@ public class FileIOWorker {
         }
         System.out.println("Items in metadataList: " + piecesOfMetadata);
     }
+    
     
     //get methods
     /**

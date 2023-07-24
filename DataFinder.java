@@ -9,11 +9,17 @@ import java.util.regex.*;
  * @author Anthony Lopez
  * @version5 7.14.23
  *    
- * 7.14.23 Notes:
+ * Notes for 7.14.23:
  *  - Replacing all index variables with 'firstXIndex' and 'lastXIndex' for easier management since methods are called
  *    one after the other, and not at the same time though that could be a cool thing to implement (multithreading?)
  *  - Tried implementing multithreading in a previous version however I'm not sure it did anything to impact performace 
  *    or if I even properly implemented it. Either way I'll come back to this topic later.
+ *  - I want to find a way where a user just inputs one of their clips and the program obtains their userID through that 
+ *    instead of having the user find it through inspect element...
+ *   
+ * Notes for 7.24.23:
+ *  - In the metadata provided by the Medal.tv api a users ID can be pretty easily identified. Providing a solution for
+ *    obtaining a users ID without having them to look for it. Need to implement
  *    
  */
 public class DataFinder
