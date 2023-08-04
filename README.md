@@ -9,6 +9,7 @@ MedalGrabber is a Java program that allows a user to obtain information about th
 ## Usage
 
 - Reliable one off usage has not yet been implemented
+- You will need to change some aspects of the source code to fit your needs, such as userID and directories
 
 ## Contributing
 
